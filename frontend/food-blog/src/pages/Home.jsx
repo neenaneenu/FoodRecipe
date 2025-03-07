@@ -13,11 +13,11 @@ const Home = () => {
     <Fragment>
       <Navbar />
       {/* <CarouselComponent/> */}
-      
-      <div className='home container '> 
-        <div>
-        <img src={carousel1} alt="" style={{ width: "100%",height: "600px",  borderRadius: "20px", marginTop: "100px" }} />
+      <div>
+        <img src={carousel1} alt="" style={{ width: "80%",height: "600px",  borderRadius: "20px", marginTop: "100px", marginLeft : "110px"}} />
         </div>
+      <div className='home container '> 
+        
         <div className="row align-items-center">
           <div className="col-md-6 mb-4" style={{ marginTop: '10px' }}>
             <h1 className="display-4">Food Recipe</h1>
