@@ -221,7 +221,7 @@ body {
 
 
 
-.container {
+.form-container {
   max-width: 600px;
   margin: 30px auto;
   padding: 20px;
@@ -279,4 +279,25 @@ label {
 
 .submit-btn:hover {
   background: #0056b3;
+} 
+
+
+
+
+
+.hero-text {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  font-weight: bolder;
+  text-align: left;
+  color: rgb(54, 4, 4);
+  padding: 15px 30px;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 3rem; 
 }
+
+
+
+

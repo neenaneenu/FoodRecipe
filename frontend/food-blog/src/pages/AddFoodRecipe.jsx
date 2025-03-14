@@ -6,7 +6,7 @@ const AddFoodRecipe = () => {
         <div style={{textAlign: "center", marginTop : "20px"}}>
             <h1 className='addRecipe'>Share your Recipe</h1>
         </div>
-    <div className='container'>
+    <div className='form-container'>
         
       <form>
         <div className='form-control'>

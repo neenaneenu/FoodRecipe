@@ -15,6 +15,8 @@ const Home = () => {
       {/* <CarouselComponent/> */}
       <div>
         <img src={carousel1} alt="" style={{ width: "80%",height: "600px",  borderRadius: "20px", marginTop: "100px", marginLeft : "110px"}} />
+        <div className='hero-text'>
+        A recipe has no soul. <br /> You, as the cook, <br /> must bring soul to the recipe</div>
         </div>
       <div className='home container '> 
         
