@@ -50,8 +50,8 @@ const RecipeItem = () => {
       </div>
 
       <div className="recipe-container">
-        {recipes.map((recipe) => (
-          <div className="recipe-card" key={recipe.id}>
+        {recipes.map((recipe , index) => (
+          <div className="recipe-card" key={recipe.id ||  index} >
             {/* Recipe Image */}
             <img
               src={recipe.image || paneer}
