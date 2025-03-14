@@ -3,8 +3,8 @@ import paneer from '../assets/paneer.jpeg';
 import Navbar from '../components/Navbar';
 import Footer from '../components/footer';
 import RecipeItem from '../components/RecipeItem';
-import CarouselComponent from '../components/carousel';
-import carousel1 from "../assets/carousel1.jpg"
+
+import hero from "../assets/hero.jpeg"
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
@@ -12,9 +12,9 @@ const Home = () => {
   return (
     <Fragment>
       <Navbar />
-      {/* <CarouselComponent/> */}
+      
       <div>
-        <img src={carousel1} alt="" style={{ width: "80%",height: "600px",  borderRadius: "20px", marginTop: "100px", marginLeft : "110px"}} />
+        <img src={hero} alt="" style={{ width: "80%",height: "600px",  borderRadius: "20px", marginTop: "100px", marginLeft : "110px"}} />
         <div className='hero-text'>
         A recipe has no soul. <br /> You, as the cook, <br /> must bring soul to the recipe</div>
         </div>

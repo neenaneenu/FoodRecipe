@@ -2,6 +2,10 @@
 
 body {
   background-color: #ffffff; /* Light grey background */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* Navbar container */
@@ -288,10 +292,10 @@ label {
 .hero-text {
   position: absolute;
   top: 40%;
-  left: 10%;
+  left: 20%;
   font-weight: bolder;
   text-align: left;
-  color: rgb(54, 4, 4);
+  color: #2c2c2c;
   padding: 15px 30px;
   border-radius: 10px;
   width: 100%;

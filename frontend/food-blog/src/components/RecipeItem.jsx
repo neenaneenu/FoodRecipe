@@ -69,7 +69,7 @@ const RecipeItem = () => {
                   ? recipe.ingredients.join(', ')
                   : recipe.ingredients}
               </p>
-
+ 
               <p>
                 <strong>Instructions:</strong> {recipe.instructions}
               </p>
