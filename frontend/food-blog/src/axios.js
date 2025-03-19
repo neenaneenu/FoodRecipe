@@ -1,10 +1,10 @@
 import axios from  "axios"
 
-export const recipie = axios.create({
+export const api = axios.create({
     baseURL : import.meta.env.VITE_ORIGIN
 })
 
-recipie.interceptors.request.use((config)=>{
+api.interceptors.request.use((config)=>{
     const token = localStorage.getItem("access_token") || null
     console.log(token)
     config.headers.Authorization = `Bearer ${token}`

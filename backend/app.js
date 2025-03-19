@@ -6,6 +6,7 @@ import cors from "cors"
 import userRoute from "./Routes/user.route.js"
 
 
+
 dotenv.config()
 const app = express()
 app.use(express.json())
