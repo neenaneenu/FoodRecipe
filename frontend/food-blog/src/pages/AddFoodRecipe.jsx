@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { Fragment, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import {toast} from 'react-hot-toast'
 
 const AddFoodRecipe = () => {
   const [recipeData, setRecipeDta]= useState({})
@@ -16,6 +17,8 @@ const AddFoodRecipe = () => {
     console.log(recipeData)
     await axios.post("http://localhost:3000/recipie" , recipeData)
     .then(()=> navigate("/"))
+    toast.success("Recipe added!");
+
 
   }
   return (

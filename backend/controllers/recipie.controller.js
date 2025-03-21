@@ -1,7 +1,21 @@
 import dontenv from "dotenv"
 import { recipieController } from "../models/recipie.model.js"
+import multer from "multer"
 
 dontenv.config()
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, './public/images')
+    },
+    filename: function (req, file, cb) {
+      const Filename = Date.now() + '-' + file.fieldname
+      cb(null, Filename)
+    }
+  })
+  
+  const upload = multer({ storage: storage })
+
 
 const getRecipies = async(req, res)=>{
   try {
@@ -80,5 +94,6 @@ export default {
     getRecipie,
     addRecipie,
     editRecipie,
-    deleteRecipie
+    deleteRecipie,
+    upload
 }
