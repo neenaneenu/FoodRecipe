@@ -6,7 +6,6 @@ import cors from "cors"
 import userRoute from "./Routes/user.route.js"
 
 
-
 dotenv.config()
 const app = express()
 app.use(express.json())
@@ -14,7 +13,8 @@ await dbConnect()
 app.use(cors())
 
 app.use("/recipie" , recipieRoute)
-app.use("/" , userRoute)
+app.use("/", userRoute); 
+
 
 app.listen(process.env.PORT || 3000, err => {
     if (err) {

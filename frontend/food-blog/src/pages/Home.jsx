@@ -3,7 +3,6 @@ import paneer from '../assets/paneer.jpeg';
 import Navbar from '../components/Navbar';
 import Footer from '../components/footer';
 import RecipeItem from '../components/RecipeItem';
-
 import hero from "../assets/hero.jpeg"
 import { useNavigate } from 'react-router-dom';
 
