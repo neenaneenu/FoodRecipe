@@ -1,20 +1,9 @@
-import dontenv from "dotenv"
+import dotenv from "dotenv"
 import { recipieController } from "../models/recipie.model.js"
-import multer from "multer"
+import { getFilePath } from "../multer.js"; 
 
-dontenv.config()
+dotenv.config()
 
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, './public/images')
-    },
-    filename: function (req, file, cb) {
-      const Filename = Date.now() + '-' + file.fieldname
-      cb(null, Filename)
-    }
-  })
-  
-  const upload = multer({ storage: storage })
 
 
 const getRecipies = async(req, res)=>{
@@ -42,19 +31,30 @@ const getRecipie = async (req, res)=>{
 
 }
 
-const addRecipie =async (req, res)=>{
-    const {title, ingredients, instructions, time}= req.body
-    if(!title || !ingredients || !instructions){
-        res.send({
-            message: "required feild can't be empty"
-        })
-    }
-    const newRecipie = await recipieController.create({
-        title,ingredients,instructions,time
-    })
-    return res.send(newRecipie)
+const addRecipie = async (req, res) => {
+  const { title, ingredients, instructions, time } = req.body;
 
-}
+  if (!title || !ingredients || !instructions) {
+    return res.status(400).send({ message: "Required fields can't be empty" });
+  }
+
+  try {
+    // Store image path if file exists
+    const imagePath = req.file ? getFilePath(req.file.filename) : null;
+
+    const newRecipie = await recipieController.create({
+      title,
+      ingredients,
+      instructions,
+      time,
+      image: imagePath, // Save the image path
+    });
+
+    return res.status(201).send(newRecipie);
+  } catch (error) {
+    return res.status(500).send({ message: "Failed to add recipe" });
+  }
+};
 
 const editRecipie =async (req, res)=>{
     const { title,ingredients,instructions,time} = req.body
@@ -95,5 +95,5 @@ export default {
     addRecipie,
     editRecipie,
     deleteRecipie,
-    upload
+    
 }

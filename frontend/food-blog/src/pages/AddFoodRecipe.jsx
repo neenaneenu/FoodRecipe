@@ -31,22 +31,22 @@ const AddFoodRecipe = () => {
       <form>
         <div className='form-control' >
           <label htmlFor="title">Title</label>
-          <input type="text" className='input' name='title' id="title" required onChange={handleOnChange} />
+          <input type="text" className='input' name='title'  required onChange={handleOnChange} />
         </div>
         
         <div className='form-control'>
-          <label htmlFor="time">Time (mins)</label>
-          <input type="number" className='input' name='time' id="time" required onChange={handleOnChange}/>
+          <label >Time (mins)</label>
+          <input type="number" className='input'  required onChange={handleOnChange}/>
         </div>
           
         <div className='form-control'>
           <label htmlFor="ingredients">Ingredients</label>
-          <textarea className='input-textarea' name="ingredients" id="ingredients" rows="5" required onChange={handleOnChange}></textarea>
+          <textarea className='input-textarea' name="ingredients"  rows="5" required onChange={handleOnChange}></textarea>
         </div>
 
         <div className='form-control'>
           <label htmlFor="instructions">Instructions</label>
-          <textarea className='input-textarea' name="instructions" id="instructions" rows="5" required onChange={handleOnChange}></textarea>
+          <textarea className='input-textarea' name="instructions"  rows="5" required onChange={handleOnChange}></textarea>
         </div>
         <div className='form-control'>
                         <label>Recipe Image</label>
