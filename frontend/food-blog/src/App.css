@@ -175,6 +175,8 @@ body {
     display: block;
 }
 
+
+
 /* Input field styles */
 .input {
     width: 100%;
@@ -186,7 +188,7 @@ body {
 }
 
 .input:focus {
-    border-color: #007BFF;
+    border-color: #000000;
 }
 
 /* Submit button styles */
@@ -282,7 +284,7 @@ label {
 }
 
 .submit-btn:hover {
-  background: #0056b3;
+  background: #000000;
 } 
 
 
